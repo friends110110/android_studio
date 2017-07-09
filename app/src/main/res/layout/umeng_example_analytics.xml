@@ -77,6 +77,11 @@
             android:layout_width="fill_parent"
             android:onClick="onButtonClick"
             android:text="@string/event_cc" />
+        <Button
+                android:id="@+id/umeng_example_click_open_new_page"
+                android:layout_width="fill_parent"
+                android:onClick="onButtonClick"
+                android:text="@string/umeng_example_click_open_new_page" />
     </TableLayout>
 
 </ScrollView>

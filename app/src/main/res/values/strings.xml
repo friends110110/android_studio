@@ -16,6 +16,7 @@
     <string name="signoff">signoff</string>
     <string name="orderid">Game pay(contains orderid)</string>
     <string name="event_cc">Categorical Counter Event</string>
+    <string name="umeng_example_click_open_new_page">umeng_example_click_open_new page</string>
     <string name="set_supper">register Super Property</string>
 
     <string name="get_suppers">Get Super Property</string>

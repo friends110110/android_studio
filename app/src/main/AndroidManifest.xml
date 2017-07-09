@@ -21,15 +21,17 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- Analytics start -->
-        <activity android:name=".analytics.AnalyticsHome" />
+        <activity android:name=".analytics.AnalyticsHome" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".analytics.WebviewAnalytic" />
         <activity android:name=".analytics.FragmentStack" />
         <activity android:name=".analytics.FragmentTabs" />
@@ -38,7 +40,7 @@
         <!-- Caution! Do not change this app key. It is only for demo usage. -->
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="4f83c5d852701564c0000011"></meta-data>
+            android:value="596087883eae2574b10013a3"></meta-data>
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="Umeng"></meta-data>

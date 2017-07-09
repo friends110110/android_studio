@@ -1,17 +1,5 @@
 package com.umeng.example.analytics;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.analytics.MobclickAgent.EScenarioType;
-import com.umeng.analytics.social.UMPlatformData;
-import com.umeng.analytics.social.UMPlatformData.GENDER;
-import com.umeng.analytics.social.UMPlatformData.UMedia;
-import com.umeng.example.R;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -20,6 +8,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.analytics.MobclickAgent.EScenarioType;
+import com.umeng.analytics.social.UMPlatformData;
+import com.umeng.analytics.social.UMPlatformData.GENDER;
+import com.umeng.analytics.social.UMPlatformData.UMedia;
+import com.umeng.example.R;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class AnalyticsHome extends Activity {
     private Context mContext;
@@ -37,11 +36,13 @@ public class AnalyticsHome extends Activity {
         MobclickAgent.openActivityDurationTrack(false);
         // MobclickAgent.setAutoLocation(true);
         // MobclickAgent.setSessionContinueMillis(1000);
-        // MobclickAgent.startWithConfigure(
-        // new UMAnalyticsConfig(mContext, "4f83c5d852701564c0000011", "Umeng",
-        // EScenarioType.E_UM_NORMAL));
+         MobclickAgent.startWithConfigure(
+         new MobclickAgent.UMAnalyticsConfig(mContext, "596087883eae2574b10013a3", "Umeng",
+         EScenarioType.E_UM_NORMAL));
         MobclickAgent.setScenarioType(mContext, EScenarioType.E_UM_NORMAL);
+
     }
+
 
     @Override
     public void onResume() {
@@ -118,7 +119,11 @@ public class AnalyticsHome extends Activity {
         case R.id.umeng_example_analytics_signoff:
             MobclickAgent.onProfileSignOff();
             break;
+        case R.id.umeng_example_click_open_new_page:
+            MobclickAgent.onPageStart("open_this_page");
+            break;
         }
+
     }
 
     @Override
