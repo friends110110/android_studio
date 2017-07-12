@@ -1,10 +1,5 @@
 package com.umeng.example.game;
 
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.analytics.MobclickAgent.EScenarioType;
-import com.umeng.analytics.game.UMGameAgent;
-import com.umeng.example.R;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -12,6 +7,10 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.analytics.MobclickAgent.EScenarioType;
+import com.umeng.analytics.game.UMGameAgent;
+import com.umeng.example.R;
 
 /**
  * 游戏统计分析(GameAgent)继承于通用统计分析(MobclickAgent),对基本统计分析功能进行扩展，提供一套游戏统计相关的专用API，

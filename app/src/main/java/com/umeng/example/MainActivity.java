@@ -1,12 +1,11 @@
 package com.umeng.example;
 
-import com.umeng.example.analytics.AnalyticsHome;
-import com.umeng.example.game.GameAnalyticsHome;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import com.umeng.example.analytics.AnalyticsHome;
+import com.umeng.example.game.GameAnalyticsHome;
 
 public class MainActivity extends Activity {
 

@@ -16,9 +16,6 @@
 
 package com.umeng.example.analytics;
 
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.example.R;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -31,6 +28,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.example.R;
 
 /**
  * <p>

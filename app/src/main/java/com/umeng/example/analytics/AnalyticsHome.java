@@ -36,9 +36,9 @@ public class AnalyticsHome extends Activity {
         MobclickAgent.openActivityDurationTrack(false);
         // MobclickAgent.setAutoLocation(true);
         // MobclickAgent.setSessionContinueMillis(1000);
-         MobclickAgent.startWithConfigure(
-         new MobclickAgent.UMAnalyticsConfig(mContext, "596087883eae2574b10013a3", "Umeng",
-         EScenarioType.E_UM_NORMAL));
+//         MobclickAgent.startWithConfigure(
+//         new MobclickAgent.UMAnalyticsConfig(mContext, "596087883eae2574b10013a3", "Umeng",
+//         EScenarioType.E_UM_NORMAL));
         MobclickAgent.setScenarioType(mContext, EScenarioType.E_UM_NORMAL);
 
     }
@@ -47,14 +47,21 @@ public class AnalyticsHome extends Activity {
     @Override
     public void onResume() {
         super.onResume();
-        MobclickAgent.onPageStart(mPageName);
+//        MobclickAgent.onPageStart(mPageName);//往preferenceshare 放入 key val值
         MobclickAgent.onResume(mContext);
+
+//        AnalyticsHomeTest home = new AnalyticsHomeTest(this);
+//        try {
+//            home.requestUmeng();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        MobclickAgent.onPageEnd(mPageName);
+//        MobclickAgent.onPageEnd(mPageName);
         MobclickAgent.onPause(mContext);
     }
 

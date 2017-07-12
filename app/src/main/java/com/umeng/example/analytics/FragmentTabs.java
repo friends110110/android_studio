@@ -1,8 +1,5 @@
 package com.umeng.example.analytics;
 
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.example.R;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -11,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.example.R;
 
 /**
  * <p>

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.example.R;
 
