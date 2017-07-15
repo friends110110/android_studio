@@ -78,7 +78,7 @@ import static com.umeng.analytics.pro.bv.t;
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class HttpContentTest {
+public class HttpRequestHeadContentTest {
     private Context mActivity;
     @Rule
     public ActivityTestRule<MainActivity> mTasksActivityTestRule =

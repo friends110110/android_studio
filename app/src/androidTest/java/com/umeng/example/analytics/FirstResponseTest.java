@@ -24,7 +24,7 @@ import java.net.URL;
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class MyTestUtils {
+public class FirstResponseTest {
     private Activity mActivity;
 
     @Rule
@@ -44,28 +44,7 @@ public class MyTestUtils {
             System.out.print(233);
         }
 
-    /**
-     * bd.class 下 c(context g) 方法 开始 session_id
-     * @param var1
-     * @return
-     */
-    public String b(Context var1) {
-        String var2 = bv.c(var1);
-        String var3 = AnalyticsConfig.getAppkey(var1);
-        long var4 = System.currentTimeMillis();
-        if(var3 == null) {
-            throw new RuntimeException("Appkey is null or empty, Please check AndroidManifest.xml");
-        } else {
-            StringBuilder var6 = new StringBuilder();
-            var6.append(var4).append(var3).append(var2);
-            String f = com.umeng.analytics.pro.bw.a(var6.toString());
-            return f;
-        }
-    }
-    @Test
-    public void testGenerateSessionId(){
-        b(mTasksActivityTestRule.getActivity());
-    }
+
 
 
     /**
