@@ -136,6 +136,12 @@ public class AnalyticsHome extends Activity {
             break;
         case R.id.umeng_example_analytics_click_onresume:
             MobclickAgent.onResume(this);
+            /**
+             * 里面有个时间戳的，必须等 onpause调用了一次 才能再调用onresume
+             * bd 类下
+             * private boolean b(SharedPreferences var1)
+             */
+            MobclickAgent.onPause(this);
             break;
         case R.id.umeng_example_click_open_new_page:
             MobclickAgent.onPageStart("open_this_page");
