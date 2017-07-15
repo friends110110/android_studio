@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="umeng-analytics-v6.1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/umeng-analytics-v6.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/umeng-analytics-v6.1.1_source_from_cfr" />
+      <root url="file://$USER_HOME$/Downloads/umeng-analytics-v6.1.1_source_from_cfr" />
+      <root url="jar://$PROJECT_DIR$/app/libs/umeng-analytics-v6.1.1.jar!/" />
+    </SOURCES>
+  </library>
+</component>
