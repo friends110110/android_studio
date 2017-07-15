@@ -204,7 +204,7 @@ public class AnalyticsHomeTest {
     @Test
     public void requestUmeng() throws Exception {
         //bc 中 c()发包方法
-        String content = mActivity.getResources().getString(R.string.body_content);
+        String content = mActivity.getResources().getText(R.string.body_content).toString();
         //接下来 解析 content的内容
         //对于 imprint 方面的内容可能是关键
         //Imprint(property:{pretime=ImprintValue(value:1499764532416, ts:1499764532416, guid:b0c682007f19211d053be67189b0d1f1eb3df131), latent=ImprintValue(value:3, ts:1499571034174, guid:4e7a0a15a72ed3918e2d7928b3a8a338d5b2f654), install_app_version=ImprintValue(value:1.0, ts:1499571034174, guid:4e7a0a150ce76952c688efcef1adb4fe78c02924), install_channel=ImprintValue(value:Umeng, ts:1499571034174, guid:4e7a0a150850adc3aca2238f98771fac444d0e2c), app_version=ImprintValue(value:1.0, ts:1499764532416, guid:b0c68200fb29ba4037b54b76b719e684a9320d71), install_datetime=ImprintValue(value:2017-07-09 11:30:34, ts:1499571034174, guid:4e7a0a158171c4e1af3d0d4c83cc16a7178cce39), os_version=ImprintValue(value:4.4.2, ts:1499764532416, guid:b0c68200afb34b8bd256abf9b1d8ff0d482b1d9e), v=ImprintValue(value:5-5-5, ts:1499764532416, guid:b0c6820086a4ed7fcd4869dcad26675994d1ff8e), jitter=ImprintValue(value:1, ts:1499764532416, guid:b0c68200c58298d4fe221a29ff0a2765ca3be0e1), channel=ImprintValue(value:Umeng, ts:1499764532416, guid:b0c6820073c0dd68082f9252dec8a4cbf7b1b3f3), umid=ImprintValue(value:aif8f9a71daa5fc7a4b5e7eec2b42361de, ts:1499764532416, guid:b0c68200d9961f3096fa0a708301e3b4cc74293b)}, version:1, checksum:c6209d767b41176e150f4f89ed1b2b6c)

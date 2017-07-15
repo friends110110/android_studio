@@ -13,6 +13,7 @@ import com.umeng.analytics.MobclickAgent.EScenarioType;
 import com.umeng.analytics.social.UMPlatformData;
 import com.umeng.analytics.social.UMPlatformData.GENDER;
 import com.umeng.analytics.social.UMPlatformData.UMedia;
+import com.umeng.example.MainActivity;
 import com.umeng.example.R;
 
 import java.util.ArrayList;
@@ -48,7 +49,7 @@ public class AnalyticsHome extends Activity {
     public void onResume() {
         super.onResume();
 //        MobclickAgent.onPageStart(mPageName);//往preferenceshare 放入 key val值
-        MobclickAgent.onResume(mContext);
+//        MobclickAgent.onResume(mContext);
 
 //        AnalyticsHomeTest home = new AnalyticsHomeTest(this);
 //        try {
@@ -58,11 +59,18 @@ public class AnalyticsHome extends Activity {
 //        }
     }
 
+    /**
+     * open new page  放到 bf的map里面
+     * onevent 放到aq的map里面
+     * b.b()
+     * 把操作记录放在数据库中
+     */
     @Override
     public void onPause() {
         super.onPause();
 //        MobclickAgent.onPageEnd(mPageName);
         MobclickAgent.onPause(mContext);
+
     }
 
     /**
@@ -126,8 +134,14 @@ public class AnalyticsHome extends Activity {
         case R.id.umeng_example_analytics_signoff:
             MobclickAgent.onProfileSignOff();
             break;
+        case R.id.umeng_example_analytics_click_onresume:
+            MobclickAgent.onResume(this);
+            break;
         case R.id.umeng_example_click_open_new_page:
             MobclickAgent.onPageStart("open_this_page");
+            break;
+        case R.id.umeng_example_click_count_event:
+            MobclickAgent.onEvent(this,"MY_EVENT_ID");
             break;
         }
 
@@ -161,7 +175,11 @@ public class AnalyticsHome extends Activity {
         });
         builder.setNeutralButton("后退一下", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
-                finish();
+//                finish();
+//                onPause();
+                Intent intent = new Intent();
+                intent.setClass(AnalyticsHome.this, MainActivity.class);
+                AnalyticsHome.this.startActivity(intent);
             }
         });
         builder.setNegativeButton("点错了", new DialogInterface.OnClickListener() {
