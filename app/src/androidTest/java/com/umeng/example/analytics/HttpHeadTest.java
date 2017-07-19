@@ -46,7 +46,7 @@ public class HttpHeadTest {
         String urlEncodeStr="Android/6.1.1 UMENG+SDK%2F1.0+Android+SDK+built+for+x86%2F4.4.2+B604C2E005AC2ABE39983E8847E63607";
         String appkey = "596087883eae2574b10013a3";//友盟申请来的appkey
         //以下为 http head X-Umeng-Sdk 头部内容
-        String encode = urlEncodeWithAppKey(mTasksActivityTestRule.getActivity(),appkey);
+        String encode = getX_Umeng_SdkVal(mTasksActivityTestRule.getActivity(),appkey);
         String urlDecodeStr= URLDecoder.decode(urlEncodeStr,"UTF-8");
         System.out.println(urlDecodeStr);
     }
@@ -73,7 +73,13 @@ public class HttpHeadTest {
         }
     }
 
-    private String urlEncodeWithAppKey(final Context context,String appKey) {
+    /**
+     * 获取X-Umeng-Sdk value值
+     * @param context
+     * @param appKey
+     * @return
+     */
+    private String getX_Umeng_SdkVal(final Context context, String appKey) {
         final StringBuffer sb = new StringBuffer();
         sb.append("Android").append("/").append("6.1.1").append(" ");
         try {
@@ -84,9 +90,7 @@ public class HttpHeadTest {
             try {
                 b= context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
             }
-            catch (PackageManager.NameNotFoundException ex) {
-
-            }
+            catch (PackageManager.NameNotFoundException ex) {}
             sb2.append(b);
             sb2.append(" ");
             sb2.append(Build.MODEL);

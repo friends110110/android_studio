@@ -42,6 +42,8 @@ public class AnalyticsHome extends Activity {
 //         EScenarioType.E_UM_NORMAL));
         MobclickAgent.setScenarioType(mContext, EScenarioType.E_UM_NORMAL);
 
+        //加密开启
+        MobclickAgent.enableEncrypt(true);
     }
 
 
@@ -141,7 +143,7 @@ public class AnalyticsHome extends Activity {
              * bd 类下
              * private boolean b(SharedPreferences var1)
              */
-            MobclickAgent.onPause(this);
+//            MobclickAgent.onPause(this);
             break;
         case R.id.umeng_example_click_open_new_page:
             MobclickAgent.onPageStart("open_this_page");

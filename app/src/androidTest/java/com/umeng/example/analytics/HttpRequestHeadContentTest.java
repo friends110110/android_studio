@@ -23,7 +23,9 @@ import java.util.Locale;
 
 import static com.umeng.analytics.pro.bv.t;
 /**
- * {
+ *
+ * aq 下 protected JSONObject a(final int... array) {
+ {
  "body":{
  "userlevel":"1"
  },
@@ -38,7 +40,7 @@ import static com.umeng.analytics.pro.bv.t;
  "timezone":-5,
  "device_name":"generic_x86",
  "imprint":"GwuMB3ByZXRpbWUYDTE0OTk3NjQ1MzI0MTYWgJP1jqZXGChiMGM2ODIwMDdmMTkyMTFkMDUzYmU2 NzE4OWIwZDFmMWViM2RmMTMxAAZsYXRlbnQYATMW/OCw1qRXGCg0ZTdhMGExNWE3MmVkMzkxOGUy ZDc5MjhiM2E4YTMzOGQ1YjJmNjU0ABNpbnN0YWxsX2FwcF92ZXJzaW9uGAMxLjAW/OCw1qRXGCg0 ZTdhMGExNTBjZTc2OTUyYzY4OGVmY2VmMWFkYjRmZTc4YzAyOTI0AA9pbnN0YWxsX2NoYW5uZWwY BVVtZW5nFvzgsNakVxgoNGU3YTBhMTUwODUwYWRjM2FjYTIyMzhmOTg3NzFmYWM0NDRkMGUyYwAL YXBwX3ZlcnNpb24YAzEuMBaAk/WOplcYKGIwYzY4MjAwZmIyOWJhNDAzN2I1NGI3NmI3MTllNjg0 YTkzMjBkNzEAEGluc3RhbGxfZGF0ZXRpbWUYEzIwMTctMDctMDkgMTE6MzA6MzQW/OCw1qRXGCg0 ZTdhMGExNTgxNzFjNGUxYWYzZDBkNGM4M2NjMTZhNzE3OGNjZTM5AApvc192ZXJzaW9uGAU0LjQu MhaAk/WOplcYKGIwYzY4MjAwYWZiMzRiOGJkMjU2YWJmOWIxZDhmZjBkNDgyYjFkOWUAAXYYBTUt NS01FoCT9Y6mVxgoYjBjNjgyMDA4NmE0ZWQ3ZmNkNDg2OWRjYWQyNjY3NTk5NGQxZmY4ZQAGaml0 dGVyGAExFoCT9Y6mVxgoYjBjNjgyMDBjNTgyOThkNGZlMjIxYTI5ZmYwYTI3NjVjYTNiZTBlMQAH Y2hhbm5lbBgFVW1lbmcWgJP1jqZXGChiMGM2ODIwMDczYzBkZDY4MDgyZjkyNTJkZWM4YTRjYmY3 YjFiM2YzAAR1bWlkGCJhaWY4ZjlhNzFkYWE1ZmM3YTRiNWU3ZWVjMmI0MjM2MWRlFoCT9Y6mVxgo YjBjNjgyMDBkOTk2MWYzMDk2ZmEwYTcwODMwMWUzYjRjYzc0MjkzYgAVAhggYzYyMDlkNzY3YjQx MTc2ZTE1MGY0Zjg5ZWQxYjJiNmMA ",
- "req_time":27,
+ "req_time":27,//对应last_request_spent_ms,距离上次请求所花的时机 System.currentTimeMillis() 相减的结果
  "carrier":"Android",
  "successful_requests":11,
  "device_board":"unknown",

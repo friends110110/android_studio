@@ -1,13 +1,11 @@
 package com.umeng.example.analytics;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Build;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
 import android.text.TextUtils;
-import com.umeng.analytics.AnalyticsConfig;
 import com.umeng.analytics.pro.*;
 import com.umeng.example.MainActivity;
 import org.junit.Rule;
@@ -119,7 +117,7 @@ public class FirstResponseTest {
      * Imprint(property:{pretime=ImprintValue(value:1500002097622, ts:1500002097622, guid:a6fb7b0fd2d8ebcca7fd28f3d4c25dc033728665), install_app_version=ImprintValue(value:1.0, ts:1500002097622, guid:a6fb7b0f63209f55ac898108b217f8f80410c95a), install_channel=ImprintValue(value:Umeng, ts:1500002097622, guid:a6fb7b0fd7018c80b8fe1c7feba0b69b837ad559), app_version=ImprintValue(value:1.0, ts:1500002097622, guid:a6fb7b0f40dec5019156ecb60451116c16dbd0e1), install_datetime=ImprintValue(value:2017-07-09 11:32:46, ts:1500002097622, guid:a6fb7b0ffbf3432955873651e940cbec69d1b1d7), os_version=ImprintValue(value:4.4.2, ts:1500002097622, guid:a6fb7b0fdcbb15c6d7052cba29fdd3c95532fbb3), v=ImprintValue(value:5-5-5, ts:1500002097622, guid:a6fb7b0f00fb1a38d36116462524af936ed20430), jitter=ImprintValue(value:108568, ts:1500002097622, guid:a6fb7b0f6aeacada7ba8bac7b9fd8ca707a5e0b0), channel=ImprintValue(value:Umeng, ts:1500002097622, guid:a6fb7b0fe69e6a97329d61e1a073f55072f4fc57), umid=ImprintValue(value:aif8f9a71daa5fc7a4b5e7eec2b42361de, ts:1500002097622, guid:a6fb7b0f27f0dc3701bb3f0157824d6892fa08f8)}, version:1, checksum:c0897e72476fe12f106060e606d268a4)
      * 等同于 如下
      *
-     * 0 = "pretime" -> "ImprintValue(value:1500002097622, ts:1500002097622, guid:a6fb7b0fd2d8ebcca7fd28f3d4c25dc033728665)"
+     0 = "pretime" -> "ImprintValue(value:1500002097622, ts:1500002097622, guid:a6fb7b0fd2d8ebcca7fd28f3d4c25dc033728665)"
      1 = "install_app_version" -> "ImprintValue(value:1.0, ts:1500002097622, guid:a6fb7b0f63209f55ac898108b217f8f80410c95a)"
      2 = "install_channel" -> "ImprintValue(value:Umeng, ts:1500002097622, guid:a6fb7b0fd7018c80b8fe1c7feba0b69b837ad559)"
      3 = "app_version" -> "ImprintValue(value:1.0, ts:1500002097622, guid:a6fb7b0f40dec5019156ecb60451116c16dbd0e1)"
